@@ -12,10 +12,10 @@ public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket server = new ServerSocket(PORT);
         System.out.println("server starting....");
-        double[][] word = {{0,1,1},{2,4,2},{6,3,5}};
         try {
             while (true) {
                 Socket socket = server.accept();
+                System.out.println("Новое соединение установлено");
                 try {
                     serverList.add(new ServerSomthing(socket));
                 } catch (IOException e) {
